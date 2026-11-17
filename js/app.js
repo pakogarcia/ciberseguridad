@@ -763,14 +763,6 @@
       trigger.closest('.accordion-item').classList.toggle('open');
     });
 
-    // Modo Ponente
-    const presenterBtn = document.getElementById('presenterToggle');
-    presenterBtn.addEventListener('click', () => {
-      const active = document.body.classList.toggle('presenter-mode');
-      presenterBtn.setAttribute('aria-pressed', String(active));
-      presenterBtn.textContent = active ? 'Modo Ponente: ON' : 'Modo Ponente';
-    });
-
     // Menú móvil
     const mobileBtn = document.getElementById('mobileMenuBtn');
     const navLinks = document.getElementById('navLinks');
