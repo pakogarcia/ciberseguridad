@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>¡Sorpresa QR! Demostración de Quishing | Familia Cibersegura</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="sos-strip">
+    <div class="container sos-strip-inner">
+      <span class="sos-pill">Demostración educativa · Quishing (Códigos QR)</span>
+      <a href="./" class="sos-btn" style="text-decoration:none;">Volver a la web principal</a>
+    </div>
+  </div>
+
+  <main class="section" style="border-bottom:none;padding:2.5rem 0;">
+    <div class="container" style="max-width:780px;">
+      <div class="card" style="padding:2rem;text-align:center;">
+        <span class="badge badge-high" style="margin:0 auto 0.75rem;">¡Sorpresa inofensiva!</span>
+        <h1 style="font-family:var(--font-display);font-size:clamp(1.6rem,3vw,2.2rem);margin:0 0 0.5rem;">
+          ¡Has escaneado el QR sorpresa!
+        </h1>
+        <p style="font-size:1.02rem;color:var(--text-secondary);margin:0 auto 1.25rem;max-width:56ch;">
+          Esta vez solo te esperaba esta imagen graciosa… pero a simple vista era imposible distinguir este código QR del que lleva a la web principal.
+        </p>
+
+        <div style="max-width:420px;margin:0 auto 1.5rem;border-radius:16px;overflow:hidden;border:2px solid var(--border);background:#fff;">
+          <img src="assets/sorpresa-qr.jpg" alt="Mapache con gafas de sol haciendo una broma detrás de un teléfono móvil" style="width:100%;height:auto;" />
+        </div>
+
+        <div class="callout warning" style="text-align:left;margin-bottom:1.25rem;">
+          <strong>¿Qué demuestra este experimento (Quishing)?</strong>
+          Un código QR no es más que una dirección web codificada en cuadrados. A simple vista <strong>nadie puede saber si lleva a un menú real, a una imagen graciosa o a una página falsa</strong> para robar contraseñas o instalar aplicaciones maliciosas.
+        </div>
+
+        <div style="text-align:left;">
+          <h2 style="font-family:var(--font-display);font-size:1.15rem;margin:0 0 0.6rem;">3 reglas para escanear códigos QR con seguridad</h2>
+          <ul class="card-list">
+            <li><strong>Usa lectores que muestren la vista previa de la URL</strong> (la cámara nativa de iPhone/Android muestra el dominio antes de abrirlo) y no abras enlaces acortados o con dominios extraños.</li>
+            <li><strong>Desconfía de pegatinas pegadas encima de carteles</strong> (en parquímetros, restaurantes, patinetes o carteles del instituto).</li>
+            <li><strong>Nunca introduzcas contraseñas ni datos bancarios</strong> tras escanear un QR de un mensaje, correo o cartel callejero sin verificar antes la web oficial.</li>
+          </ul>
+        </div>
+
+        <div style="margin-top:1.5rem;display:flex;justify-content:center;gap:0.75rem;flex-wrap:wrap;">
+          <a href="./#quishing" class="btn btn-primary">Volver a la sección de Códigos QR</a>
+          <a href="./" class="btn btn-outline">Ir al inicio de la guía</a>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

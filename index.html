@@ -187,6 +187,57 @@
         </div>
 
         <div class="grid-3" id="risksGrid"></div>
+
+        <!-- Demostración práctica de Quishing (Códigos QR) -->
+        <div id="quishing" style="margin-top: 2.25rem; padding-top: 2rem; border-top: 1px solid var(--border);">
+          <div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:1rem;margin-bottom:1.25rem;">
+            <div>
+              <span class="badge badge-high" style="margin-bottom:0.45rem;">Demostración en vivo · Quishing</span>
+              <h3 style="font-family:var(--font-display);font-size:1.35rem;margin:0 0 0.35rem;">
+                Códigos QR: ¿sabrías distinguir cuál lleva a mi web y cuál a una broma?
+              </h3>
+              <p style="margin:0;color:var(--text-secondary);max-width:74ch;">
+                A simple vista es imposible saber qué hay dentro de un código QR. Solo una aplicación o la cámara del móvil (mostrando la <strong>vista previa de la dirección web antes de abrirla</strong>) permite detectar a dónde te dirige.
+              </p>
+            </div>
+            <button type="button" class="btn btn-outline btn-sm" id="revealQrBtn" aria-expanded="false">
+              Revelar destinos
+            </button>
+          </div>
+
+          <div class="grid-2">
+            <div class="card" style="align-items:center;text-align:center;">
+              <span class="badge badge-info">Código QR A</span>
+              <div style="background:#ffffff;padding:0.75rem;border-radius:12px;border:1px solid var(--border);max-width:240px;">
+                <img src="assets/qr-sorpresa.svg" alt="Código QR de demostración A" style="width:210px;height:210px;" />
+              </div>
+              <p style="font-size:0.9rem;">Apunta con la cámara de tu móvil y fíjate en la URL que aparece antes de pulsar.</p>
+              <div class="qr-reveal callout warning" style="display:none;width:100%;text-align:left;font-size:0.86rem;">
+                <strong>Destino real del QR A:</strong>
+                Lleva a una imagen graciosa de demostración (<a href="sorpresa.html">sorpresa.html</a>). En un ataque real de <em>quishing</em>, podría ser una web falsa que imita a tu banco o red social.
+              </div>
+            </div>
+
+            <div class="card" style="align-items:center;text-align:center;">
+              <span class="badge badge-info">Código QR B</span>
+              <div style="background:#ffffff;padding:0.75rem;border-radius:12px;border:1px solid var(--border);max-width:240px;">
+                <img src="assets/qr-web.svg" alt="Código QR de demostración B" style="width:210px;height:210px;" />
+              </div>
+              <p style="font-size:0.9rem;">Visualmente es igual de legítimo que el anterior, pero su destino es distinto.</p>
+              <div class="qr-reveal callout teal" style="display:none;width:100%;text-align:left;font-size:0.86rem;">
+                <strong>Destino real del QR B:</strong>
+                Lleva a esta misma guía oficial (<a href="https://pakogarcia.github.io/ciberseguridad/" target="_blank" rel="noopener noreferrer">pakogarcia.github.io/ciberseguridad/</a>).
+              </div>
+            </div>
+          </div>
+
+          <div class="callout" style="margin-top:1.15rem;">
+            <strong>Cómo enseñar a nuestros hijos a revisar un QR antes de abrirlo:</strong>
+            1) Usar la cámara nativa o un lector que <strong>muestre la URL completa sin abrirla automáticamente</strong>.
+            2) Comprobar el dominio exacto (evitar enlaces acortados o dominios extraños).
+            3) Desconfiar de pegatinas pegadas encima de carteles, mesas o máquinas en la vía pública.
+          </div>
+        </div>
       </div>
     </section>
 

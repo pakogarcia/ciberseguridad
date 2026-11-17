@@ -763,6 +763,20 @@
       trigger.closest('.accordion-item').classList.toggle('open');
     });
 
+    // Revelar destinos QR (Quishing)
+    const revealQrBtn = document.getElementById('revealQrBtn');
+    if (revealQrBtn) {
+      revealQrBtn.addEventListener('click', () => {
+        const expanded = revealQrBtn.getAttribute('aria-expanded') === 'true';
+        const nextState = !expanded;
+        revealQrBtn.setAttribute('aria-expanded', String(nextState));
+        revealQrBtn.textContent = nextState ? 'Ocultar destinos' : 'Revelar destinos';
+        document.querySelectorAll('.qr-reveal').forEach((el) => {
+          el.style.display = nextState ? 'block' : 'none';
+        });
+      });
+    }
+
     // Menú móvil
     const mobileBtn = document.getElementById('mobileMenuBtn');
     const navLinks = document.getElementById('navLinks');

@@ -265,6 +265,19 @@ const RISKS_DATA = [
     prevention: 'Verificación en dos pasos (2FA) obligatoria en todas las cuentas y regla de oro: nunca compartir códigos SMS con nadie.'
   },
   {
+    id: 'quishing-qr',
+    category: 'tecnicos',
+    severity: 'medio',
+    title: 'Quishing: estafas mediante códigos QR manipulados',
+    subtitle: 'Enlaces ocultos a simple vista',
+    summary: 'Uso de códigos QR falsos (pegatinas superpuestas en carteles, cartas o correos) para dirigir a páginas fraudulentas o descargas maliciosas.',
+    howItWorks: [
+      'El ojo humano no puede leer un código QR: dos QR idénticos en apariencia pueden llevar a webs totalmente distintas.',
+      'Si la cámara o app abre el enlace automáticamente sin mostrar el dominio previo, el usuario entra directo en la trampa.'
+    ],
+    prevention: 'Usar lectores/cámaras que muestren la vista previa de la URL antes de abrirla y comprobar siempre el dominio exacto.'
+  },
+  {
     id: 'videojuegos',
     category: 'contenidos',
     severity: 'medio',
