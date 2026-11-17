@@ -838,6 +838,126 @@ const SPEAKER_FAQ = [
   }
 ];
 
+const NEWS_DATA = [
+  {
+    id: 'news-almendralejo-cgpj',
+    category: 'deepfakes',
+    topicLabel: 'Deepfakes e IA',
+    source: 'Poder Judicial (CGPJ)',
+    title: 'Imponen la medida de libertad vigilada durante un año a los 15 menores acusados de manipular y difundir imágenes de menores desnudas en Badajoz',
+    summary: 'El Juzgado de Menores de Badajoz declaró responsables penales a 15 menores por 20 delitos de pornografía infantil y 20 contra la integridad moral tras manipular fotos con IA y difundirlas por WhatsApp.',
+    url: 'https://www.poderjudicial.es/cgpj/es/Poder-Judicial/Noticias-Judiciales/Imponen-la-medida-de-libertad-vigilada-durante-un-ano-a-los-15-menores-acusados-de-manipular-y-difundir-imagenes-de-menores-desnudas-en-Badajoz'
+  },
+  {
+    id: 'news-deepfake-aepd',
+    category: 'deepfakes',
+    topicLabel: 'Deepfakes e IA',
+    source: 'Newtral',
+    title: '‘Deepfakes’ como objeto de multa: la sanción de la AEPD',
+    summary: 'Resolución sancionadora pionera de la Agencia Española de Protección de Datos (2.000 €, reducida a 1.200 € por pronto pago) por la difusión sin consentimiento de imágenes manipuladas con IA.',
+    url: 'https://www.newtral.es/deepfakes-sancion-aepd/20251107/'
+  },
+  {
+    id: 'news-sextorsion-valencia',
+    category: 'grooming',
+    topicLabel: 'Sextorsión',
+    source: 'Europa Press',
+    title: 'Detenidos cinco menores por exigir dinero a otros a cambio de no publicar sus imágenes sexuales en redes sociales',
+    summary: 'Caso de sextorsión entre menores en la Comunitat Valenciana donde los implicados coaccionaban a las víctimas amenazando con difundir su material íntimo.',
+    url: 'https://www.europapress.es/comunitat-valenciana/noticia-detenidos-cinco-menores-exigir-dinero-otros-cambio-no-publicar-imagenes-sexuales-redes-sociales-20220929134146.html'
+  },
+  {
+    id: 'news-grooming-videojuego',
+    category: 'grooming',
+    topicLabel: 'Grooming y Videojuegos',
+    source: 'Europa Press',
+    title: 'Detenido en Linares (Jaén) por difundir contenido pedófilo de un menor al que captó a través de un videojuego',
+    summary: 'La investigación policial acreditó que el detenido utilizó un videojuego online como vía de acercamiento inicial para ganarse la confianza del menor.',
+    url: 'https://www.europapress.es/andalucia/noticia-detenido-linares-jaen-acusado-captar-menor-traves-videojuego-difundir-contenido-pedofilo-20261104100940.html'
+  },
+  {
+    id: 'news-grooming-almeria',
+    category: 'grooming',
+    topicLabel: 'Grooming en Redes',
+    source: 'Europa Press',
+    title: 'Detenido en Almería un hombre acusado de contactar sexualmente con una menor a través de redes sociales',
+    summary: 'Actuación policial frente al engaño y captación sexual de una menor mediante contacto iniciado en plataformas sociales.',
+    url: 'https://www.europapress.es/andalucia/almeria-00350/noticia-detenido-almeria-hombre-acusado-contactar-sexualmente-menor-traves-redes-sociales-20261117084624.html'
+  },
+  {
+    id: 'news-roblox-incibe',
+    category: 'grooming',
+    topicLabel: 'Caso real INCIBE 017',
+    source: 'INCIBE (017)',
+    title: 'Un adulto finge ser un menor en Roblox para acercarse a una niña',
+    summary: 'Caso real atendido por la Línea de Ayuda en Ciberseguridad (017) que muestra cómo operan los perfiles falsos en videojuegos y cómo actuar en familia.',
+    url: 'https://www.incibe.es/linea-de-ayuda-en-ciberseguridad/casos-reales/un-adulto-finge-ser-un-menor-en-roblox-para-acercarse-una-nina'
+  },
+  {
+    id: 'news-cuentas-curis-sevilla',
+    category: 'acoso',
+    topicLabel: 'Ciberbullying',
+    source: 'Diario de Sevilla',
+    title: 'La Fiscalía de Sevilla investiga 16 denuncias de cuentas ‘curis’ que ridiculizan a profesores y alumnos',
+    summary: 'Investigación de la Fiscalía ante la proliferación de perfiles anónimos en redes sociales creados para humillar, insultar o difundir montajes de miembros de centros escolares.',
+    url: 'https://www.diariodesevilla.es/juzgado_de_guardia/actualidad/fiscalia-sevilla-investiga-16-casos-cuentas-curis-ridiculizan-profesores-alumnos_0_2008413628.html'
+  },
+  {
+    id: 'news-multas-padres-ciberacoso',
+    category: 'acoso',
+    topicLabel: 'Ciberacoso y Ley',
+    source: '20minutos',
+    title: 'Vigila las redes sociales de tu hijo: puedes recibir multas de hasta 10.000 euros por sus comportamientos ilegales',
+    summary: 'Análisis sobre la responsabilidad administrativa y civil que recae sobre padres y tutores por conductas de ciberacoso, extorsión o difusión de imágenes por menores.',
+    url: 'https://www.20minutos.es/tecnologia/ciberseguridad/los-peligros-ciberacoso-las-redes-sociales-5176925/'
+  },
+  {
+    id: 'news-estafa-fortnite-incibe',
+    category: 'estafas',
+    topicLabel: 'Estafa a menores',
+    source: 'INCIBE (017)',
+    title: 'Un menor es estafado al realizar la compra de una cuenta de Fortnite',
+    summary: 'Caso real de fraude a través de TikTok con petición de pago mediante tarjetas regalo para adquirir cuentas de videojuegos.',
+    url: 'https://www.incibe.es/linea-de-ayuda-en-ciberseguridad/casos-reales/un-menor-es-estafado-al-realizar-la-compra-de-una-cuenta-de-fortnite'
+  },
+  {
+    id: 'news-ciberestafas-jovenes-rtve',
+    category: 'estafas',
+    topicLabel: 'Ciberestafas',
+    source: 'RTVE Noticias',
+    title: 'Las ciberestafas se disparan y ponen su diana en los jóvenes',
+    summary: 'Reportaje sobre el aumento de fraudes digitales dirigidos a menores y jóvenes en compras online, redes sociales y mensajería.',
+    url: 'https://www.rtve.es/noticias/20241202/ciberestafas-jovenes-compras-internet-consumo-espana/16294373.shtml'
+  },
+  {
+    id: 'news-mafias-videojuegos-voz',
+    category: 'estafas',
+    topicLabel: 'Videojuegos',
+    source: 'La Voz de Galicia',
+    title: 'Las mafias detrás de Roblox, Fortnite, Steam... Así le deja el videojuego de su hijo en números rojos',
+    summary: 'Cómo operan los fraudes con monedas virtuales falsas, micropagos no autorizados y robo de datos bancarios vinculados a dispositivos familiares.',
+    url: 'https://www.lavozdegalicia.es/noticia/sociedad/2026/07/08/mafias-detras-roblox-fortnite-steam-deja-videojuego-hijo-numeros-rojos/00031783496237211935362.htm'
+  },
+  {
+    id: 'news-reto-viral-aeped',
+    category: 'redes-retos',
+    topicLabel: 'Retos virales',
+    source: 'AEPED (EnFamilia)',
+    title: 'Alerta sobre los peligros de un reto viral en TikTok que pone en riesgo la salud',
+    summary: 'Advertencia de la Asociación Española de Pediatría sobre desafíos virales en redes sociales que inducen conductas de riesgo físico entre menores.',
+    url: 'https://www.aeped.es/enfamilia/actualidad/alerta-sobre-peligros-un-reto-viral-en-tiktok-que-pone-en-riesgo'
+  },
+  {
+    id: 'news-ue-tiktok-rtve',
+    category: 'redes-retos',
+    topicLabel: 'Redes sociales',
+    source: 'RTVE Noticias',
+    title: 'La UE señala a TikTok por fallos en la seguridad de los menores',
+    summary: 'Cobertura sobre la investigación europea acerca del diseño algorítmico, la protección frente a la adicción y la exposición de menores en la plataforma.',
+    url: 'https://www.rtve.es/noticias/20260724/bruselas-acusa-tiktok-incumplir-ley-exponer-menores-ciberacoso-comportamiento-depredador/17168379.shtml'
+  }
+];
+
 window.CIBER_DATA = {
   APPS_DATA,
   HIDDEN_MECHANICS,
@@ -846,6 +966,7 @@ window.CIBER_DATA = {
   WARNING_SIGNS,
   ACTION_PROTOCOL,
   VIDEOS_DATA,
+  NEWS_DATA,
   CRISIS_SCENARIOS,
   RESOURCES_DATA,
   SPEAKER_TIMELINE,

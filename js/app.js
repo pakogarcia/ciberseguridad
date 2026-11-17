@@ -7,6 +7,7 @@
     WARNING_SIGNS,
     ACTION_PROTOCOL,
     VIDEOS_DATA,
+    NEWS_DATA,
     CRISIS_SCENARIOS,
     RESOURCES_DATA,
     SPEAKER_TIMELINE,
@@ -462,6 +463,31 @@
       .join('');
   }
 
+  // -------------------- NOTICIAS Y CASOS REALES --------------------
+  function renderNews(filter = 'all') {
+    const grid = document.getElementById('newsGrid');
+    const list = filter === 'all' ? NEWS_DATA : NEWS_DATA.filter((n) => n.category === filter);
+
+    grid.innerHTML = list
+      .map(
+        (n) => `
+      <article class="card">
+        <div class="card-top">
+          <span class="badge badge-info">${escapeHtml(n.topicLabel)}</span>
+          <span style="font-size:0.78rem;font-weight:700;color:var(--text-muted);">${escapeHtml(n.source)}</span>
+        </div>
+        <h3>${escapeHtml(n.title)}</h3>
+        <p>${escapeHtml(n.summary)}</p>
+        <div style="margin-top:auto;padding-top:0.5rem;">
+          <a href="${escapeHtml(n.url)}" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+            Leer noticia comprobada ↗
+          </a>
+        </div>
+      </article>`
+      )
+      .join('');
+  }
+
   // -------------------- BLOQUE 7: RECURSOS --------------------
   function renderResources() {
     const grid = document.getElementById('resourcesGrid');
@@ -590,6 +616,14 @@
         videoId: v.id
       })
     );
+    NEWS_DATA.forEach((n) =>
+      entries.push({
+        type: `Noticia (${n.source})`,
+        title: n.title,
+        desc: n.summary,
+        target: '#noticias'
+      })
+    );
     RESOURCES_DATA.forEach((res) =>
       entries.push({
         type: 'Recurso oficial',
@@ -677,6 +711,15 @@
       document.querySelectorAll('#videoFilters .filter-btn').forEach((b) => b.classList.remove('active'));
       btn.classList.add('active');
       renderVideos(btn.dataset.filter);
+    });
+
+    // Filtros Noticias
+    document.getElementById('newsFilters').addEventListener('click', (e) => {
+      const btn = e.target.closest('.filter-btn');
+      if (!btn) return;
+      document.querySelectorAll('#newsFilters .filter-btn').forEach((b) => b.classList.remove('active'));
+      btn.classList.add('active');
+      renderNews(btn.dataset.filter);
     });
 
     // Tabs Bloque 4 y Checkboxes
@@ -807,6 +850,7 @@
   renderActionProtocol();
   renderWorkshop('taller-1');
   renderVideos('all');
+  renderNews('all');
   renderResources();
   renderSpeakerGuide();
   initEvents();
