@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ciberseguridad en el Entorno Padres e Hijos | Guía, Talleres y Recursos</title>
+  <meta name="description" content="Portal completo para ponencia sobre ciberseguridad en el entorno padres-hijos: redes sociales, riesgos, IA y deepfakes, control parental, señales de alerta, talleres prácticos, vídeos verificados de YouTube y recursos de ayuda (INCIBE 017, AEPD, ANAR)." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Franja superior de ayuda inmediata -->
+  <div class="sos-strip" role="region" aria-label="Teléfonos de ayuda inmediata">
+    <div class="container sos-strip-inner">
+      <div class="sos-numbers">
+        <span class="sos-pill">INCIBE 017 (Gratis · 8:00–23:00 · 365 días)</span>
+        <span>WhatsApp INCIBE: <strong>900 116 117</strong></span>
+        <span>ANAR Menores: <strong>900 20 20 10</strong></span>
+        <span>Emergencias: <strong>112 / 091 / 062</strong></span>
+      </div>
+      <button type="button" class="sos-btn" id="openSosBtn">Protocolo de Emergencia SOS</button>
+    </div>
+  </div>
+
+  <!-- Navegación principal -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#inicio" class="brand">
+        <span class="brand-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            <path d="m9 12 2 2 4-4"></path>
+          </svg>
+        </span>
+        <span>
+          Familia Cibersegura
+          <span class="brand-sub">Ponencia Padres e Hijos</span>
+        </span>
+      </a>
+
+      <nav class="nav-links" id="navLinks" aria-label="Navegación de secciones">
+        <a class="nav-link" href="#bloque-1">1. Apps</a>
+        <a class="nav-link" href="#bloque-2">2. Riesgos</a>
+        <a class="nav-link" href="#bloque-3">3. IA y Datos</a>
+        <a class="nav-link" href="#bloque-4">4. Móvil</a>
+        <a class="nav-link" href="#bloque-5">5. Señales</a>
+        <a class="nav-link" href="#bloque-6">6. Actuar</a>
+        <a class="nav-link" href="#talleres">Talleres</a>
+        <a class="nav-link" href="#videoteca">Vídeos</a>
+        <a class="nav-link" href="#bloque-7">7. Ayuda</a>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="btn-presenter" id="presenterToggle" aria-pressed="false" title="Aumenta el tamaño de lectura y muestra notas de ponente">
+          Modo Ponente
+        </button>
+        <button type="button" class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menú">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="inicio">
+    <div class="container hero-grid">
+      <div>
+        <div class="hero-eyebrow">Guía verificada · INCIBE / IS4K · AEPD · UNICEF España</div>
+        <h1>Ciberseguridad en el entorno padres e hijos</h1>
+        <p class="hero-lead">
+          Herramienta integral de apoyo para la ponencia y las familias: mapa real de aplicaciones, riesgos actuales, retos de la inteligencia artificial, configuración práctica del móvil, talleres interactivos y videoteca verificada en YouTube.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#talleres" class="btn btn-teal">Ir a Talleres Prácticos</a>
+          <a href="#videoteca" class="btn btn-primary">Ver Vídeos de YouTube</a>
+          <a href="#ponente" class="btn btn-outline-light">Guión del Ponente</a>
+        </div>
+
+        <div class="hero-search-wrap">
+          <svg class="hero-search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.3-4.3"></path>
+          </svg>
+          <input
+            type="search"
+            id="globalSearch"
+            class="hero-search-input"
+            placeholder="Buscar app, riesgo, vídeo o solución (ej. Roblox, deepfake, 2FA, NGL, 017)..."
+            aria-label="Buscar en todo el portal"
+          />
+          <div class="search-results-box" id="searchResultsBox" aria-live="polite"></div>
+        </div>
+      </div>
+
+      <aside class="stats-card" aria-label="Datos verificados de uso en España">
+        <p class="stats-card-title">Radiografía verificada en España</p>
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-value">10,8 años</div>
+            <div class="stat-label">Edad media de acceso al primer móvil propio</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">76 %</div>
+            <div class="stat-label">Tiene móvil propio a los 12 años (92,8 % en la ESO)</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">92,5 %</div>
+            <div class="stat-label">Registrado en al menos una red social</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">~60 %</div>
+            <div class="stat-label">Duerme con el móvil o tableta en su habitación</div>
+          </div>
+        </div>
+        <p class="stats-source">
+          Fuente: Estudio «Impacto de la tecnología en la adolescencia» / «Infancia, adolescencia y bienestar digital» (UNICEF España, USC, Red.es y CCII).
+        </p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Índice visual de los 7 bloques -->
+  <div class="roadmap-bar">
+    <div class="container">
+      <div class="roadmap-grid">
+        <a href="#bloque-1" class="roadmap-item"><span class="roadmap-num">Bloque 1</span><span class="roadmap-title">Redes y Apps</span></a>
+        <a href="#bloque-2" class="roadmap-item"><span class="roadmap-num">Bloque 2</span><span class="roadmap-title">Riesgos en la Red</span></a>
+        <a href="#bloque-3" class="roadmap-item"><span class="roadmap-num">Bloque 3</span><span class="roadmap-title">IA, Deepfakes y Datos</span></a>
+        <a href="#bloque-4" class="roadmap-item"><span class="roadmap-num">Bloque 4</span><span class="roadmap-title">Configurar el Móvil</span></a>
+        <a href="#bloque-5" class="roadmap-item"><span class="roadmap-num">Bloque 5</span><span class="roadmap-title">Detectar Problemas</span></a>
+        <a href="#bloque-6" class="roadmap-item"><span class="roadmap-num">Bloque 6</span><span class="roadmap-title">Actuar y Educar</span></a>
+        <a href="#bloque-7" class="roadmap-item"><span class="roadmap-num">Bloque 7</span><span class="roadmap-title">Recursos y Denuncia</span></a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- BLOQUE 1 -->
+    <section class="section" id="bloque-1">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="section-badge">Bloque 1</span>
+            <h2>Redes sociales y aplicaciones que utilizan los preadolescentes</h2>
+            <p class="section-desc">
+              Conocer cómo funcionan, qué edad mínima exigen y qué herramientas de control integran las plataformas principales y las apps menos conocidas por las familias.
+            </p>
+          </div>
+        </div>
+
+        <div class="callout presenter-only" style="margin-bottom: 1.25rem;">
+          <strong>Nota para el ponente:</strong>
+          Pregunta a la sala cuántas de estas aplicaciones tienen instaladas sus hijos y cuántas de las «menos conocidas» (NGL, Character.AI, calculadoras bóveda) habían oído nombrar antes.
+        </div>
+
+        <div class="filter-bar" id="appFilters" role="group" aria-label="Filtrar aplicaciones">
+          <button type="button" class="filter-btn active" data-filter="all">Todas (12)</button>
+          <button type="button" class="filter-btn" data-filter="mainstream">Redes principales</button>
+          <button type="button" class="filter-btn" data-filter="mensajeria">Mensajería</button>
+          <button type="button" class="filter-btn" data-filter="gaming">Videojuegos y directo</button>
+          <button type="button" class="filter-btn" data-filter="menos-conocidas">Menos conocidas por padres</button>
+        </div>
+
+        <div class="grid-3" id="appsGrid"></div>
+
+        <div style="margin-top: 2rem;">
+          <h3 style="font-family: var(--font-display); margin: 0 0 0.75rem;">Cuentas secundarias, perfiles privados, chats ocultos y grupos</h3>
+          <div class="mechanics-grid" id="mechanicsGrid"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOQUE 2 -->
+    <section class="section" id="bloque-2">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="section-badge danger">Bloque 2</span>
+            <h2>Riesgos y peligros en Internet</h2>
+            <p class="section-desc">
+              Análisis riguroso de las amenazas relacionales, de contenido y de seguridad más frecuentes en preadolescencia y adolescencia.
+            </p>
+          </div>
+        </div>
+
+        <div class="filter-bar" id="riskFilters" role="group" aria-label="Filtrar riesgos">
+          <button type="button" class="filter-btn active" data-filter="all">Todos los riesgos</button>
+          <button type="button" class="filter-btn" data-filter="relacionales">Grooming, Sexting y Ciberacoso</button>
+          <button type="button" class="filter-btn" data-filter="contenidos">Retos virales y Videojuegos</button>
+          <button type="button" class="filter-btn" data-filter="tecnicos">Estafas y Robo de cuentas</button>
+        </div>
+
+        <div class="grid-3" id="risksGrid"></div>
+      </div>
+    </section>
+
+    <!-- BLOQUE 3 -->
+    <section class="section" id="bloque-3">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="section-badge danger">Bloque 3</span>
+            <h2>Nuevos riesgos relacionados con la tecnología e Inteligencia Artificial</h2>
+            <p class="section-desc">
+              Deepfakes y manipulación de imágenes de menores, vínculo emocional con chatbots de IA y exposición de datos personales (huella digital y sharenting).
+            </p>
+          </div>
+        </div>
+
+        <div class="grid-3" id="aiRisksGrid"></div>
+
+        <div class="callout warning" style="margin-top: 1.5rem;">
+          <strong>Marco legal y responsabilidad en España (AEPD / Código Penal):</strong>
+          Crear o reenviar imágenes manipuladas con IA de carácter sexual o vejatorio no es «una broma». Aunque la persona sea menor de 14 años (inimputable penalmente), la responsabilidad civil económica recae sobre padres/tutores y la AEPD puede instruir procedimientos sancionadores, además del uso inmediato del Canal Prioritario para su retirada.
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOQUE 4 -->
+    <section class="section" id="bloque-4">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="section-badge teal">Bloque 4</span>
+            <h2>Uso y configuración práctica del teléfono móvil</h2>
+            <p class="section-desc">
+              Lista de verificación interactiva paso a paso para blindar privacidad en redes, permisos de cámara/micrófono/ubicación, contraseñas y 2FA, y controles parentales (Google Family Link y Tiempo de uso de Apple).
+            </p>
+          </div>
+          <button type="button" class="btn btn-outline btn-sm" id="resetChecklistBtn">Reiniciar progreso</button>
+        </div>
+
+        <div class="checklist-progress" aria-live="polite">
+          <div>
+            <strong id="checklistSummary">0 de 17 ajustes completados</strong>
+            <div style="font-size: 0.82rem; color: var(--text-muted);">Tu progreso se guarda localmente en este navegador</div>
+          </div>
+          <div class="progress-track" aria-hidden="true">
+            <div class="progress-fill" id="checklistProgressFill"></div>
+          </div>
+        </div>
+
+        <div class="tabs-nav" id="configTabsNav" role="tablist"></div>
+        <div id="configTabPanel"></div>
+
+        <div class="grid-2" style="margin-top: 1.5rem;">
+          <div class="callout">
+            <strong>Android vs iPhone: aclaración técnica clave</strong>
+            Google Family Link permite supervisar dispositivos Android/Chromebook desde un móvil Android o iPhone del adulto. Sin embargo, <strong>Family Link no puede limitar el tiempo ni bloquear apps dentro del iPhone de un menor</strong>: en iOS debe configurarse «En Familia» y «Tiempo de uso» de Apple con un código parental distinto al de desbloqueo.
+          </div>
+          <div class="callout teal">
+            <strong>Regla de oro del descanso nocturno</strong>
+            Casi el 60 % de los adolescentes duerme con el móvil en la habitación y 1 de cada 5 se conecta pasada la medianoche (UNICEF España). Sacar los dispositivos del dormitorio y establecer una estación de carga familiar en el salón reduce de golpe los conflictos nocturnos y la exposición a riesgos.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOQUE 5 -->
+    <section class="section" id="bloque-5">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="section-badge">Bloque 5</span>
+            <h2>Cómo detectar posibles problemas: señales de alerta</h2>
+            <p class="section-desc">
+              Marca las señales que hayas observado para obtener una pauta orientativa de actuación (herramienta educativa de detección temprana, no diagnóstica).
+            </p>
+          </div>
+        </div>
+
+        <div class="grid-2" id="signalsGrid"></div>
+
+        <div class="detector-summary" id="detectorSummary" aria-live="polite">
+          <strong>Resultado orientativo (0 señales marcadas):</strong>
+          <p style="margin: 0.35rem 0 0; color: var(--text-secondary);">
+            Marca cualquier cambio de comportamiento observado para ver recomendaciones prácticas de diálogo y comprobación.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOQUE 6 -->
+    <section class="section" id="bloque-6">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="section-badge teal">Bloque 6</span>
+            <h2>Cómo actuar y educar a nuestros hijos</h2>
+            <p class="section-desc">
+              Protocolo paso a paso ante amenazas, peticiones de fotografías o ciberacoso, conservación de pruebas y educación basada en límites claros y confianza.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <div>
+            <h3 style="font-family: var(--font-display); margin-top: 0;">Protocolo de respuesta en 5 pasos</h3>
+            <div style="display: grid; gap: 0.85rem;" id="actionProtocolList"></div>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 1rem;">
+            <div class="card">
+              <h3>Cómo conservar pruebas con validez</h3>
+              <ul class="card-list">
+                <li><strong>No borrar nada</strong> antes de documentarlo (ni chats, ni el perfil del agresor, ni la aplicación).</li>
+                <li>Capturar la pantalla completa mostrando <strong>fecha, hora, nombre de usuario y URL o teléfono</strong> visible.</li>
+                <li>Si es una web abierta o enlace, anotar la dirección exacta (URL).</li>
+                <li>En delitos graves, llevar el dispositivo original a Policía Nacional o Guardia Civil para que puedan volcar o certificar la evidencia sin alterar metadatos.</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <h3>Fomentar la confianza y poner normas</h3>
+              <ul class="card-list">
+                <li><strong>Evitar la confiscación reactiva</strong> como primera respuesta cuando el menor pide ayuda por un error en la red.</li>
+                <li>Pactar normas escritas antes de entregar el móvil (horarios, espacios sin pantalla, privacidad).</li>
+                <li>Interesarse por sus juegos y creadores sin ridiculizar su ocio digital: «¿Qué es lo que más te gusta de ese juego?» abre más puertas que un interrogatorio.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TALLERES PRÁCTICOS -->
+    <section class="section" id="talleres">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="section-badge teal">Talleres Prácticos</span>
+            <h2>4 talleres listos para hacer en familia o durante la ponencia</h2>
+            <p class="section-desc">
+              Actividades prácticas, generador imprimible de Pacto Digital Familiar y simulacro interactivo de crisis («¿Qué harías si...?»).
+            </p>
+          </div>
+        </div>
+
+        <div class="workshop-tabs" role="tablist">
+          <button type="button" class="workshop-tab active" data-workshop="taller-1">
+            <small>Taller 1 · 15 min</small>
+            <span>Auditoría exprés del móvil</span>
+          </button>
+          <button type="button" class="workshop-tab" data-workshop="taller-2">
+            <small>Taller 2 · 20 min</small>
+            <span>Blindaje de 5 apps clave</span>
+          </button>
+          <button type="button" class="workshop-tab" data-workshop="taller-3">
+            <small>Taller 3 · Imprimible</small>
+            <span>Pacto Digital Familiar</span>
+          </button>
+          <button type="button" class="workshop-tab" data-workshop="taller-4">
+            <small>Taller 4 · Interactivo</small>
+            <span>Simulacro: ¿Qué harías si...?</span>
+          </button>
+        </div>
+
+        <div class="workshop-panel" id="workshopPanel"></div>
+      </div>
+    </section>
+
+    <!-- VIDEOTECA YOUTUBE -->
+    <section class="section" id="videoteca">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="section-badge">Videoteca Verificada en YouTube</span>
+            <h2>Vídeos seleccionados y comprobados para la ponencia y las familias</h2>
+            <p class="section-desc">
+              Todos los enlaces han sido comprobados con canales oficiales y divulgadores de referencia (INCIBE, IS4K, PantallasAmigas, AEPD, RTVE y tutoriales de control parental). Haz clic en «Reproducir aquí» o abre directamente en YouTube.
+            </p>
+          </div>
+        </div>
+
+        <div class="filter-bar" id="videoFilters" role="group" aria-label="Filtrar vídeos">
+          <button type="button" class="filter-btn active" data-filter="all">Todos (27)</button>
+          <button type="button" class="filter-btn" data-filter="familias">Mediación y Familias</button>
+          <button type="button" class="filter-btn" data-filter="grooming-acoso">Grooming y Ciberacoso</button>
+          <button type="button" class="filter-btn" data-filter="sexting-privacidad">Sexting y Privacidad</button>
+          <button type="button" class="filter-btn" data-filter="ia-deepfakes">Deepfakes e IA</button>
+          <button type="button" class="filter-btn" data-filter="tutoriales">Tutoriales Control Parental</button>
+          <button type="button" class="filter-btn" data-filter="estafas-2fa">Estafas y 2FA</button>
+        </div>
+
+        <div class="grid-3" id="videosGrid"></div>
+      </div>
+    </section>
+
+    <!-- BLOQUE 7 -->
+    <section class="section" id="bloque-7">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="section-badge danger">Bloque 7</span>
+            <h2>Recursos de ayuda, retirada de imágenes y denuncia en España</h2>
+            <p class="section-desc">
+              Teléfonos oficiales, canales de retirada urgente sin consentimiento y organismos especializados para familias y centros educativos.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid-2" id="resourcesGrid"></div>
+      </div>
+    </section>
+
+    <!-- GUÍA DEL PONENTE -->
+    <section class="section" id="ponente">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="section-badge">Guía del Ponente</span>
+            <h2>Estructura sugerida para tu charla y preguntas frecuentes</h2>
+            <p class="section-desc">
+              Escaleta recomendada para una ponencia de 60 minutos con padres y respuestas fundamentadas ante las dudas más habituales en el turno de preguntas.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <div>
+            <h3 style="font-family: var(--font-display); margin-top: 0;">Escaleta recomendada (60 min)</h3>
+            <div style="display: grid; gap: 0.75rem;" id="speakerTimeline"></div>
+          </div>
+
+          <div>
+            <h3 style="font-family: var(--font-display); margin-top: 0;">Preguntas frecuentes del público</h3>
+            <div id="speakerFaq"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>Ciberseguridad Padres e Hijos</h4>
+        <p>
+          Recurso divulgativo y de apoyo a ponencias elaborado con información contrastada de organismos oficiales españoles e internacionales. Ante cualquier incidente real con un menor, contacta de inmediato con <strong>INCIBE (017)</strong>, <strong>Fundación ANAR (900 20 20 10 / 600 50 51 52)</strong> o las Fuerzas y Cuerpos de Seguridad (<strong>091 / 062 / 112</strong>).
+        </p>
+      </div>
+      <div>
+        <h4>Enlaces oficiales clave</h4>
+        <ul style="list-style: none; padding: 0; margin: 0; display: grid; gap: 0.4rem;">
+          <li><a href="https://www.incibe.es/menores/familias" target="_blank" rel="noopener noreferrer">INCIBE / IS4K Familias</a></li>
+          <li><a href="https://www.incibe.es/menores/pactos-familiares-para-el-buen-uso-de-dispositivos" target="_blank" rel="noopener noreferrer">Pactos Familiares INCIBE</a></li>
+          <li><a href="https://www.aepd.es/canalprioritario" target="_blank" rel="noopener noreferrer">AEPD Canal Prioritario</a></li>
+          <li><a href="https://www.anar.org/" target="_blank" rel="noopener noreferrer">Fundación ANAR</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Retirada y Denuncia</h4>
+        <ul style="list-style: none; padding: 0; margin: 0; display: grid; gap: 0.4rem;">
+          <li><a href="https://www.missingkids.org/gethelpnow/cybertipline" target="_blank" rel="noopener noreferrer">NCMEC / CyberTipline</a></li>
+          <li><a href="https://stopncii.org/?lang=es" target="_blank" rel="noopener noreferrer">StopNCII (18+)</a></li>
+          <li><a href="https://www.policia.es/_es/denuncias.php" target="_blank" rel="noopener noreferrer">Policía Nacional Denuncias</a></li>
+          <li><a href="https://web.guardiacivil.es/es/tramites/denuncias/denuncia-electronica/" target="_blank" rel="noopener noreferrer">Guardia Civil Denuncia Electrónica</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal Reproductor de Vídeo y Emergencia SOS -->
+  <div class="modal-backdrop" id="appModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 id="modalTitle" style="margin: 0; font-family: var(--font-display); font-size: 1.08rem;">Detalle</h3>
+        <button type="button" class="modal-close" id="closeModalBtn">Cerrar ✕</button>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
