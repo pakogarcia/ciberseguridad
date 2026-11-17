@@ -262,7 +262,7 @@ const RISKS_DATA = [
       'Robo de WhatsApp: un conocido (con la cuenta ya hackeada) pide "un código de 6 dígitos que te acaba de llegar por error".',
       'Suplantación de identidad: creación de perfiles falsos con el nombre y foto del menor para estafar o insultar a terceros.'
     ],
-    prevention: 'Verificación en dos pasos (2FA) obligatoria en todas las cuentas y regla de oro: nunca compartir códigos SMS con nadie.'
+    prevention: 'Verificación en dos pasos (2FA) obligatoria en todas las cuentas, regla de oro: nunca compartir códigos SMS con nadie, y comprobar mensajes dudosos en el Chatbot de Maldita.es (+34 644 229 319).'
   },
   {
     id: 'quishing-qr',
@@ -275,7 +275,7 @@ const RISKS_DATA = [
       'El ojo humano no puede leer un código QR: dos QR idénticos en apariencia pueden llevar a webs totalmente distintas.',
       'Si la cámara o app abre el enlace automáticamente sin mostrar el dominio previo, el usuario entra directo en la trampa.'
     ],
-    prevention: 'Usar lectores/cámaras que muestren la vista previa de la URL antes de abrirla y comprobar siempre el dominio exacto.'
+    prevention: 'Usar lectores/cámaras que muestren la vista previa de la URL antes de abrirla, comprobar siempre el dominio exacto y consultar posibles fraudes en Maldito Timo (maldita.es/timo).'
   },
   {
     id: 'videojuegos',
@@ -655,6 +655,14 @@ const VIDEOS_DATA = [
     note: 'Demostración del timo del código de 6 dígitos y activación del PIN.'
   },
   {
+    id: 'K64OX8qNFIw',
+    title: 'Maldita.es lanza el primer chatbot de Whatsapp en español para verificar bulos automáticamente',
+    channel: 'Maldita.es',
+    category: 'estafas-2fa',
+    duration: 'Herramienta útil',
+    note: 'Cómo usar el WhatsApp de Maldita.es (+34 644 229 319) para comprobar cadenas y timos.'
+  },
+  {
     id: 'fy_V2OETc90',
     title: '3 estafas que circulan por WhatsApp y SMS (y ajustes para blindarte)',
     channel: 'Don Disquete',
@@ -809,6 +817,14 @@ const RESOURCES_DATA = [
     schedule: 'Acceso abierto online',
     url: 'https://www.pantallasamigas.net/',
     urgent: false
+  },
+  {
+    name: 'Maldita.es — Maldito Timo y Chatbot WhatsApp',
+    role: 'Verificación de estafas digitales, phishing, cadenas virales y guías de tecnología para familias',
+    contact: 'Chatbot WhatsApp: +34 644 229 319 · Sección Maldito Timo y Maldita Tecnología',
+    schedule: 'Consulta gratuita 24/7 por WhatsApp y web',
+    url: 'https://maldita.es/timo/',
+    urgent: false
   }
 ];
 
@@ -955,6 +971,33 @@ const NEWS_DATA = [
     title: 'La UE señala a TikTok por fallos en la seguridad de los menores',
     summary: 'Cobertura sobre la investigación europea acerca del diseño algorítmico, la protección frente a la adicción y la exposición de menores en la plataforma.',
     url: 'https://www.rtve.es/noticias/20260724/bruselas-acusa-tiktok-incumplir-ley-exponer-menores-ciberacoso-comportamiento-depredador/17168379.shtml'
+  },
+  {
+    id: 'news-maldita-ia-ciberacoso',
+    category: 'deepfakes',
+    topicLabel: 'Deepfakes e IA',
+    source: 'Maldita Tecnología',
+    title: 'Inteligencia artificial y ciberacoso: imágenes sexuales, memes humillantes y perfiles falsos. ¿Qué pueden hacer padres y profesores?',
+    summary: 'Guía práctica de Maldita.es con recomendaciones concretas para familias y docentes frente al uso de IA en el acoso escolar y montajes falsos.',
+    url: 'https://maldita.es/malditatecnologia/20250908/ciberacoso-inteligencia-artificial-recomendaciones/'
+  },
+  {
+    id: 'news-maldita-ia-violencia',
+    category: 'deepfakes',
+    topicLabel: 'Deepfakes e IA',
+    source: 'Maldita Tecnología',
+    title: 'Las dos caras de la IA: cómo se usa para ejercer violencia digital contra menores y cómo puede ser parte de la solución',
+    summary: 'Análisis sobre el uso de bots y herramientas de IA para generar contenido no consentido de menores, las vías legales de denuncia y sus límites.',
+    url: 'https://maldita.es/malditatecnologia/20250922/inteligencia-artificial-violencia-digital-menores-solucion/'
+  },
+  {
+    id: 'news-maldita-micropagos-juegos',
+    category: 'estafas',
+    topicLabel: 'Videojuegos',
+    source: 'Maldita Tecnología',
+    title: 'Micropagos, compras y fraudes en los videojuegos: qué son y cómo proteger a los menores',
+    summary: 'Explicación clara de los riesgos económicos asociados a monedas virtuales, cajas de botín y estafas en videojuegos populares.',
+    url: 'https://maldita.es/malditatecnologia/20230207/micropagos-proteger-menores-videojuegos/'
   }
 ];
 
