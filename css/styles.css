@@ -530,7 +530,7 @@ button {
 .roadmap-bar {
   background: var(--bg-surface);
   border-bottom: 1px solid var(--border);
-  padding: 1.1rem 0;
+  padding: 0.9rem 0 1.05rem;
 }
 
 .roadmap-grid {
@@ -538,6 +538,8 @@ button {
   grid-template-columns: repeat(7, minmax(130px, 1fr));
   gap: 0.6rem;
   overflow-x: auto;
+  padding: 6px 4px;
+  margin: -6px -4px;
 }
 
 .roadmap-item {
