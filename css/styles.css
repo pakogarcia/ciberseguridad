@@ -789,7 +789,7 @@ button {
   background: var(--teal-soft);
 }
 
-.callout strong {
+.callout > strong:first-child {
   display: block;
   margin-bottom: 0.25rem;
 }

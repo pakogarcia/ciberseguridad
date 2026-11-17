@@ -236,7 +236,7 @@
     if (id === 'taller-1') {
       panel.innerHTML = `
         <h3 style="font-family:var(--font-display);margin-top:0;">Taller 1: Auditoría exprés del móvil en 15 minutos</h3>
-        <p style="color:var(--text-secondary);">Actividad guiada para realizar junto con tu hijo/a (ideal para proyectar y hacer en directo durante la ponencia).</p>
+        <p style="color:var(--text-secondary);">Actividad guiada de 15 minutos para realizar junto con tu hijo o hija.</p>
         <div class="grid-3" style="margin-top:1rem;">
           <div class="card">
             <span class="badge badge-info">Minutos 0–5</span>
