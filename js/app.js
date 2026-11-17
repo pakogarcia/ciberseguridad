@@ -66,6 +66,9 @@
             ${app.risks
               .map((r) => {
                 if (typeof r === 'string') return `<li>${escapeHtml(r)}</li>`;
+                if (r.href) {
+                  return `<li>${escapeHtml(r.text)} <a href="${escapeHtml(r.href)}" target="_blank" rel="noopener noreferrer" style="font-weight:700;text-decoration:underline;text-underline-offset:2px;">${escapeHtml(r.actionLabel)}</a></li>`;
+                }
                 return `<li>${escapeHtml(r.text)} <button type="button" class="inline-link-btn" data-open-info="${escapeHtml(r.modalKey)}">${escapeHtml(r.actionLabel)}</button></li>`;
               })
               .join('')}
@@ -75,8 +78,11 @@
           <strong>Control parental / Ajuste clave:</strong>
           ${escapeHtml(app.parentalTool)}
           ${
-            app.guideUrl
-              ? `<div style="margin-top:0.4rem;"><a href="${escapeHtml(app.guideUrl)}" target="_blank" rel="noopener noreferrer">Ver guía oficial ↗</a></div>`
+            app.guideUrl || app.extraGuideUrl
+              ? `<div style="margin-top:0.45rem;display:flex;flex-wrap:wrap;gap:0.45rem 0.9rem;">
+                  ${app.guideUrl ? `<a href="${escapeHtml(app.guideUrl)}" target="_blank" rel="noopener noreferrer">Ver guía oficial ↗</a>` : ''}
+                  ${app.extraGuideUrl ? `<a href="${escapeHtml(app.extraGuideUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(app.extraGuideLabel || 'Más información ↗')}</a>` : ''}
+                </div>`
               : ''
           }
         </div>

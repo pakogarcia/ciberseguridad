@@ -61,11 +61,21 @@ const APPS_DATA = [
     usage: 'Mensajería, audios, estados, videollamadas y grupos escolares o de amigos.',
     risks: [
       'Grupos masivos donde cualquiera añade al menor y se difunden insultos, bulos o imágenes sin consentimiento.',
-      'Chats bloqueados con código/huella, mensajes temporales que se autodestruyen y fotos de "visualización única".',
-      'Robo de cuenta mediante ingeniería social (pedir el código SMS de 6 dígitos).'
+      {
+        text: 'Chats bloqueados con código/huella, mensajes temporales que se autodestruyen y fotos de "visualización única".',
+        actionLabel: 'Guía INCIBE de privacidad en WhatsApp ↗',
+        href: 'https://www.incibe.es/ciudadania/blog/mejora-la-privacidad-de-tus-conversaciones-en-whatsapp'
+      },
+      {
+        text: 'Robo de cuenta mediante ingeniería social (pedir el código SMS de 6 dígitos).',
+        actionLabel: 'Cómo activar la verificación en dos pasos ↗',
+        href: 'https://faq.whatsapp.com/1920866721452534/?cms_platform=web&locale=es_ES'
+      }
     ],
     parentalTool: 'Ajustes de Privacidad (quién puede añadirte a grupos: "Mis contactos", ocultar foto/última vez a desconocidos) + Verificación en dos pasos (PIN de 6 dígitos).',
-    guideUrl: 'https://faq.whatsapp.com/1313491802751163/?locale=es_LA'
+    guideUrl: 'https://faq.whatsapp.com/1313491802751163/?locale=es_LA',
+    extraGuideUrl: 'https://www.incibe.es/sites/default/files/Cuidadan%C3%ADa/Infograf%C3%ADas/2026/configuracioneswhatsapp_f.pdf',
+    extraGuideLabel: 'Infografía PDF de configuración (INCIBE) ↗'
   },
   {
     id: 'telegram',
