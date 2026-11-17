@@ -516,20 +516,11 @@
     ).join('');
   }
 
-  // -------------------- GUÍA DEL PONENTE --------------------
-  function renderSpeakerGuide() {
-    document.getElementById('speakerTimeline').innerHTML = SPEAKER_TIMELINE.map(
-      (t) => `
-      <div class="card" style="padding:1rem 1.15rem;">
-        <div style="display:flex;justify-content:space-between;align-items:center;gap:0.5rem;">
-          <strong>${escapeHtml(t.block)}</strong>
-          <span class="badge badge-info">${escapeHtml(t.time)}</span>
-        </div>
-        <p style="margin-top:0.35rem;">${escapeHtml(t.points)}</p>
-      </div>`
-    ).join('');
-
-    document.getElementById('speakerFaq').innerHTML = SPEAKER_FAQ.map(
+  // -------------------- PREGUNTAS FRECUENTES --------------------
+  function renderFaq() {
+    const faqEl = document.getElementById('speakerFaq');
+    if (!faqEl) return;
+    faqEl.innerHTML = SPEAKER_FAQ.map(
       (f, idx) => `
       <div class="accordion-item ${idx === 0 ? 'open' : ''}">
         <button type="button" class="accordion-trigger">
@@ -830,6 +821,25 @@
       navLinks.classList.remove('mobile-open');
     });
 
+    // Scroll-spy para resaltar el elemento activo del menú
+    if ('IntersectionObserver' in window) {
+      const navItems = Array.from(document.querySelectorAll('#navLinks .nav-link'));
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const id = entry.target.getAttribute('id');
+              navItems.forEach((a) => {
+                a.classList.toggle('active', a.getAttribute('href') === `#${id}`);
+              });
+            }
+          });
+        },
+        { rootMargin: '-30% 0px -60% 0px' }
+      );
+      document.querySelectorAll('main > section[id]').forEach((sec) => observer.observe(sec));
+    }
+
     // Buscador global
     const searchInput = document.getElementById('globalSearch');
     searchInput.addEventListener('input', (e) => handleSearch(e.target.value));
@@ -852,6 +862,6 @@
   renderVideos('all');
   renderNews('all');
   renderResources();
-  renderSpeakerGuide();
+  renderFaq();
   initEvents();
 })();

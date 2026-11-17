@@ -199,20 +199,23 @@ button {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 0.25rem;
-  overflow-x: auto;
-  scrollbar-width: none;
+  gap: 0.2rem;
+  flex-wrap: nowrap;
 }
 
-.nav-links::-webkit-scrollbar {
-  display: none;
+.nav-sep {
+  width: 1px;
+  height: 20px;
+  background: var(--border-strong);
+  margin: 0 0.3rem;
+  flex-shrink: 0;
 }
 
 .nav-link {
-  padding: 0.45rem 0.7rem;
+  padding: 0.42rem 0.62rem;
   border-radius: var(--radius-sm);
   color: var(--text-secondary);
-  font-size: 0.86rem;
+  font-size: 0.83rem;
   font-weight: 600;
   white-space: nowrap;
   transition: background 0.15s ease, color 0.15s ease;
@@ -223,6 +226,17 @@ button {
   background: var(--primary-soft);
   color: var(--primary);
   text-decoration: none;
+}
+
+.nav-link-tool {
+  background: var(--bg-muted);
+  color: var(--text-main);
+}
+
+.nav-link-tool:hover,
+.nav-link-tool.active {
+  background: var(--teal-soft);
+  color: var(--teal);
 }
 
 .header-actions {
@@ -288,8 +302,13 @@ button {
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-bottom: 1.75rem;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-actions .btn {
+  padding: 0.65rem 1rem;
+  font-size: 0.88rem;
 }
 
 .btn {
@@ -356,7 +375,7 @@ button {
 /* Buscador global */
 .hero-search-wrap {
   position: relative;
-  max-width: 580px;
+  max-width: 640px;
 }
 
 .hero-search-input {
@@ -497,6 +516,46 @@ button {
   background: var(--primary-soft);
   text-decoration: none;
   transform: translateY(-2px);
+}
+
+.roadmap-extras {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.55rem;
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px dashed var(--border);
+}
+
+.roadmap-extras-label {
+  font-size: 0.76rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  margin-right: 0.25rem;
+}
+
+.roadmap-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.34rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-strong);
+  background: var(--bg-page);
+  color: var(--text-main);
+  font-size: 0.82rem;
+  font-weight: 700;
+  transition: all 0.15s ease;
+}
+
+.roadmap-chip:hover {
+  border-color: var(--teal);
+  background: var(--teal-soft);
+  color: var(--teal);
+  text-decoration: none;
 }
 
 .roadmap-num {
@@ -1199,23 +1258,7 @@ button {
 }
 
 /* Responsive */
-@media (max-width: 980px) {
-  .hero-grid,
-  .pacto-form-grid,
-  .footer-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .grid-3,
-  .mechanics-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .grid-4,
-  .workshop-tabs {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
+@media (max-width: 1120px) {
   .nav-links {
     display: none;
   }
@@ -1232,10 +1275,36 @@ button {
     border-bottom: 1px solid var(--border);
     padding: 0.75rem 1.25rem;
     box-shadow: var(--shadow-md);
+    max-height: 75vh;
+    overflow-y: auto;
+  }
+
+  .nav-sep {
+    width: 100%;
+    height: 1px;
+    margin: 0.35rem 0;
   }
 
   .mobile-menu-btn {
     display: inline-flex;
+  }
+}
+
+@media (max-width: 980px) {
+  .hero-grid,
+  .pacto-form-grid,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-3,
+  .mechanics-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .grid-4,
+  .workshop-tabs {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
