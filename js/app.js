@@ -63,7 +63,12 @@
         <div>
           <strong style="font-size:0.85rem;">Principales riesgos:</strong>
           <ul class="card-list">
-            ${app.risks.map((r) => `<li>${escapeHtml(r)}</li>`).join('')}
+            ${app.risks
+              .map((r) => {
+                if (typeof r === 'string') return `<li>${escapeHtml(r)}</li>`;
+                return `<li>${escapeHtml(r.text)} <button type="button" class="inline-link-btn" data-open-info="${escapeHtml(r.modalKey)}">${escapeHtml(r.actionLabel)}</button></li>`;
+              })
+              .join('')}
           </ul>
         </div>
         <div class="callout teal" style="margin-top:auto;padding:0.75rem 0.9rem;font-size:0.85rem;">
@@ -575,6 +580,68 @@
     modal.classList.add('open');
   }
 
+  function openNglModal() {
+    modalTitle.textContent = 'Apps de preguntas anónimas en Historias (NGL, Tellonym...)';
+    modalBody.innerHTML = `
+      <div class="callout warning" style="margin-bottom:1rem;">
+        <strong>¿Por qué muchos padres no saben que esto ocurre en Instagram?</strong>
+        Porque el enlace se pega en una Historia temporal (que desaparece a las 24 horas) y las respuestas anónimas llegan a una <strong>aplicación externa</strong> fuera de los filtros y de la Supervisión Parental de Instagram.
+      </div>
+
+      <div style="display:grid;gap:0.9rem;font-size:0.93rem;">
+        <div>
+          <h4 style="margin:0 0 0.35rem;font-family:var(--font-display);">1. Cómo funciona paso a paso</h4>
+          <ol class="card-list">
+            <li>El menor descarga una app externa como <strong>NGL (Not Gonna Lie)</strong> o <strong>Tellonym</strong>.</li>
+            <li>La app genera un enlace personal (p. ej. «hazme una pregunta anónima») que se pega como un <em>sticker</em> en las Historias de Instagram o Snapchat.</li>
+            <li>Cualquier persona que vea la Historia (conocidos o desconocidos si la cuenta es abierta) escribe un mensaje anónimo que el menor lee después en la app externa.</li>
+          </ol>
+        </div>
+
+        <div>
+          <h4 style="margin:0 0 0.35rem;font-family:var(--font-display);">2. Riesgos principales para menores</h4>
+          <ul class="card-list">
+            <li><strong>Ciberacoso impune:</strong> el anonimato desinhibe insultos, burlas sobre el físico y rumores escolares que dañan la autoestima.</li>
+            <li><strong>Suscripciones y pagos engañosos:</strong> muchas apps ofrecen versiones de pago (p. ej., <em>NGL Pro</em>) prometiendo «pistas» para descubrir quién escribió cada mensaje, generando cobros recurrentes.</li>
+            <li><strong>Puerta de entrada al grooming:</strong> adultos desconocidos pueden escribir mensajes halagadores o insinuantes para entablar contacto.</li>
+            <li><strong>Exposición de datos:</strong> estas apps externas recopilan metadatos del dispositivo y patrones de uso fuera del entorno supervisado.</li>
+          </ul>
+        </div>
+
+        <div class="callout teal">
+          <strong>Qué podemos hacer en casa:</strong>
+          Revisar si está instalada NGL, Tellonym u otra app de mensajes anónimos; hablar sin juzgar sobre por qué el anonimato facilita el acoso; guardar capturas completas si hay amenazas/insultos y consultar gratis en <strong>INCIBE (017)</strong>.
+        </div>
+      </div>
+
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.75rem;margin-top:1.1rem;">
+        <button type="button" class="btn btn-teal btn-sm" id="jumpToNglCardBtn">
+          Ver ficha «NGL y Tellonym» ↓
+        </button>
+        <a href="https://www.incibe.es/menores/familias" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+          Guía de familias INCIBE / IS4K ↗
+        </a>
+      </div>`;
+    modal.classList.add('open');
+
+    const jumpBtn = document.getElementById('jumpToNglCardBtn');
+    if (jumpBtn) {
+      jumpBtn.addEventListener('click', () => {
+        closeModal();
+        document.querySelectorAll('#appFilters .filter-btn').forEach((b) => {
+          b.classList.toggle('active', b.dataset.filter === 'all');
+        });
+        renderApps('all');
+        const targetCard = document.querySelector('[data-app-id="ngl-tellonym"]');
+        if (targetCard) {
+          targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          targetCard.classList.add('card-highlight');
+          setTimeout(() => targetCard.classList.remove('card-highlight'), 2600);
+        }
+      });
+    }
+  }
+
   function closeModal() {
     modal.classList.remove('open');
     modalBody.innerHTML = '';
@@ -677,7 +744,15 @@
 
   // -------------------- EVENTOS GLOBALES --------------------
   function initEvents() {
-    // Filtros Apps
+    // Filtros Apps y enlaces ampliados dentro de tarjetas
+    document.getElementById('appsGrid').addEventListener('click', (e) => {
+      const infoBtn = e.target.closest('[data-open-info]');
+      if (!infoBtn) return;
+      if (infoBtn.dataset.openInfo === 'ngl') {
+        openNglModal();
+      }
+    });
+
     document.getElementById('appFilters').addEventListener('click', (e) => {
       const btn = e.target.closest('.filter-btn');
       if (!btn) return;

@@ -27,7 +27,11 @@ const APPS_DATA = [
     usage: 'Fotos, Reels, Historias efímeras de 24 h, Notas, Canales de difusión y mensajes directos.',
     risks: [
       'Cuentas secundarias ("Finsta" o cuentas B) privadas para el grupo cercano o sin supervisión adulta.',
-      'Integración con apps de preguntas anónimas externas (como NGL) en Historias.',
+      {
+        text: 'Integración con apps de preguntas anónimas externas (como NGL) en Historias.',
+        actionLabel: 'Ampliar información: cómo funcionan y riesgos →',
+        modalKey: 'ngl'
+      },
       'Comparación social constante, ciberacoso en comentarios/DMs y contacto con desconocidos.'
     ],
     parentalTool: 'Cuentas de Adolescentes (privadas por defecto, modo reposo nocturno 22:00-7:00 y filtro de contenido sensible) + Centro para Familias (Supervisión Parental).',

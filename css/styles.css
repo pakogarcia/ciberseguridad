@@ -413,6 +413,28 @@ button {
   border-radius: var(--radius-sm);
 }
 
+.inline-link-btn {
+  display: inline;
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--primary);
+  font-weight: 700;
+  font-size: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  cursor: pointer;
+}
+
+.inline-link-btn:hover {
+  color: var(--primary-hover);
+}
+
+.card-highlight {
+  border-color: var(--primary) !important;
+  box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.2) !important;
+}
+
 /* Buscador global */
 .hero-search-wrap {
   position: relative;
