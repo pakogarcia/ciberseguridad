@@ -336,12 +336,15 @@ const RISKS_DATA = [
     severity: 'medio',
     title: 'Exposición de datos, huella digital y Sharenting',
     subtitle: 'Lo que contamos nosotros y ellos',
-    summary: 'Publicar ubicación, escudo del colegio en el uniforme, rutinas diarias o datos personales (también por parte de los propios padres: sharenting).',
+    summary: 'Publicar fotos, cumpleaños, ubicación, escudo del colegio o rutinas diarias de los hijos desde pequeños (sharenting), creando una huella digital permanente sin su consentimiento.',
     howItWorks: [
-      'Las fotos y vídeos revelan mucho más de lo aparente: calle, horario de salida, centro escolar y círculo familiar.',
-      'Esa información facilita la ingeniería social, la suplantación y el entrenamiento no consentido de herramientas de IA.'
+      'Las fotos y vídeos revelan mucho más de lo aparente: calle, horario de salida, centro escolar, gustos personales y círculo familiar.',
+      'Como advierte la campaña «Pause before you post» (DPC Irlanda), cada publicación cotidiana facilita el robo de identidad, el grooming, el acoso futuro o la manipulación con IA.'
     ],
-    prevention: 'No publicar fotos de menores en cuentas abiertas, revisar metadatos/fondos antes de subir nada y dar ejemplo como padres.'
+    prevention: 'Pausar antes de publicar («Pause before you post»): no subir fotos de menores en cuentas abiertas, revisar fondos/uniformes y dar ejemplo como padres.',
+    videoId: '_3pEkTmNPDE',
+    videoTitle: 'Campaña sobre los peligros del Sharenting («Pause before you post»)',
+    videoLabel: 'Ver vídeo de campaña: peligros del sharenting ▶'
   }
 ];
 
@@ -579,6 +582,14 @@ const VIDEOS_DATA = [
     category: 'sexting-privacidad',
     duration: 'Institucional AEPD',
     note: 'Derechos digitales de los menores, privacidad y protección de datos.'
+  },
+  {
+    id: '_3pEkTmNPDE',
+    title: 'Irlanda lanza una campaña sobre los peligros del Sharenting («Pause before you post»)',
+    channel: 'EL PAÍS',
+    category: 'sexting-privacidad',
+    duration: 'Campaña concienciación',
+    note: 'Impacto de que los propios padres compartan fotos y datos cotidianos de sus hijos en redes.'
   },
   {
     id: 'MPlig5ZPMhw',
