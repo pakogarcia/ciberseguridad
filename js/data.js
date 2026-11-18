@@ -493,6 +493,22 @@ const VIDEOS_DATA = [
     note: 'Conversación clara sobre riesgos cotidianos, señales de alerta y prevención en casa.'
   },
   {
+    id: 'WqBl2zyXI7g',
+    title: 'Campaña UNICEF sobre redes sociales',
+    channel: 'EL PAÍS',
+    category: 'familias',
+    duration: 'Campaña UNICEF',
+    note: 'Uso responsable de las redes y protección de menores.'
+  },
+  {
+    id: 'UrrQaeUKcas',
+    title: '¿Cuántos amigos de verdad tienes?',
+    channel: 'CULTURA NOVA Bienvenidos',
+    category: 'familias',
+    duration: 'Reflexión educativa',
+    note: 'Diferencia entre contactos virtuales y relaciones reales de confianza.'
+  },
+  {
     id: 'Pa2ttVRA-xU',
     title: 'Internet Grooming: ciberacoso sexual a niños/as y adolescentes y su prevención',
     channel: 'PantallasAmigas',
@@ -531,6 +547,30 @@ const VIDEOS_DATA = [
     category: 'grooming-acoso',
     duration: 'Decálogo visual',
     note: 'Diez reglas claras de respeto digital para debatir en talleres familiares.'
+  },
+  {
+    id: 'nfxan9p8sDI',
+    title: 'Discurso del odio: tu otra cara en redes sociales',
+    channel: 'Orange España',
+    category: 'grooming-acoso',
+    duration: 'Campaña concienciación',
+    note: 'Respeto en línea, comentarios dañinos y responsabilidad al publicar.'
+  },
+  {
+    id: 'i_92-NovRT0',
+    title: 'Los peligros de internet para los niños: grooming',
+    channel: 'Central Informativa TV',
+    category: 'grooming-acoso',
+    duration: 'Prevención grooming',
+    note: 'Cómo alguien puede ganarse la confianza de un menor con fines de abuso o explotación.'
+  },
+  {
+    id: 'Hhi1M6lnnXI',
+    title: 'Cita a ciegas: el engaño en las redes sociales',
+    channel: 'Red Magisterial',
+    category: 'grooming-acoso',
+    duration: 'Prevención engaños',
+    note: 'Identidades falsas, engaños y precauciones al conocer gente en internet.'
   },
   {
     id: '3SUCAD3hdgs',
@@ -587,6 +627,30 @@ const VIDEOS_DATA = [
     category: 'sexting-privacidad',
     duration: 'Campaña concienciación',
     note: 'Impacto de que los propios padres compartan fotos y datos cotidianos de sus hijos en redes.'
+  },
+  {
+    id: '4ZMVoDXIVuo',
+    title: 'Tu vida en las redes sociales tiene público',
+    channel: 'Pablo Castro Aballay',
+    category: 'sexting-privacidad',
+    duration: 'Concienciación',
+    note: 'Privacidad, huella digital y alcance real de lo que compartimos.'
+  },
+  {
+    id: '6Lxse84Bd7M',
+    title: '«Me gusta» no es lo mismo que «me gustas»',
+    channel: 'Orange España',
+    category: 'sexting-privacidad',
+    duration: 'Campaña consentimiento',
+    note: 'Consentimiento, límites personales e interacciones digitales.'
+  },
+  {
+    id: '24YcUO-Fpqc',
+    title: 'Spot sobre sexting',
+    channel: 'Manda Productora',
+    category: 'sexting-privacidad',
+    duration: 'Spot concienciación',
+    note: 'Riesgos de compartir imágenes íntimas y la importancia del consentimiento.'
   },
   {
     id: 'MPlig5ZPMhw',
