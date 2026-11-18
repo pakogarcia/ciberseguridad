@@ -139,14 +139,6 @@
         </div>
         <div class="callout teal" style="margin-top:auto;padding:0.75rem 0.9rem;font-size:0.85rem;">
           <strong>Prevención práctica:</strong> ${escapeHtml(r.prevention)}
-          ${
-            r.videoId
-              ? `<div style="margin-top:0.5rem;display:flex;flex-wrap:wrap;gap:0.45rem 0.85rem;align-items:center;">
-                  <button type="button" class="inline-link-btn" data-play-video="${escapeHtml(r.videoId)}" data-video-title="${escapeHtml(r.videoTitle || r.title)}">${escapeHtml(r.videoLabel || 'Ver vídeo relacionado ▶')}</button>
-                  <a href="https://www.youtube.com/watch?v=${escapeHtml(r.videoId)}" target="_blank" rel="noopener noreferrer">Abrir en YouTube ↗</a>
-                </div>`
-              : ''
-          }
         </div>
       </article>`;
   }

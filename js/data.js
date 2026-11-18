@@ -336,15 +336,12 @@ const RISKS_DATA = [
     severity: 'medio',
     title: 'Exposición de datos, huella digital y Sharenting',
     subtitle: 'Lo que contamos nosotros y ellos',
-    summary: 'Publicar fotos, cumpleaños, ubicación, escudo del colegio o rutinas diarias de los hijos desde pequeños (sharenting), creando una huella digital permanente sin su consentimiento.',
+    summary: 'Publicar fotos, cumpleaños, ubicación, escudo del colegio o rutinas diarias de los hijos desde pequeños (sharenting), creando una huella digital permanente.',
     howItWorks: [
-      'Las fotos y vídeos revelan mucho más de lo aparente: calle, horario de salida, centro escolar, gustos personales y círculo familiar.',
-      'Como advierte la campaña «Pause before you post» (DPC Irlanda), cada publicación cotidiana facilita el robo de identidad, el grooming, el acoso futuro o la manipulación con IA.'
+      'Las fotos y vídeos revelan mucho más de lo aparente: calle, horario de salida, centro escolar y círculo familiar.',
+      'Como advierte la campaña «Pause before you post», esa exposición facilita el robo de identidad, el grooming o la manipulación con IA.'
     ],
-    prevention: 'Pausar antes de publicar («Pause before you post»): no subir fotos de menores en cuentas abiertas, revisar fondos/uniformes y dar ejemplo como padres.',
-    videoId: '_3pEkTmNPDE',
-    videoTitle: 'Campaña sobre los peligros del Sharenting («Pause before you post»)',
-    videoLabel: 'Ver vídeo de campaña: peligros del sharenting ▶'
+    prevention: 'Pausar antes de publicar: no subir fotos de menores en cuentas abiertas, revisar fondos/uniformes y dar ejemplo como padres.'
   }
 ];
 
